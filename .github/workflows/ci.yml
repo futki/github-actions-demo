@@ -16,9 +16,9 @@ jobs:
         npm install
         npm run-script build
 
-    - name: Output
+    - name: Env set
       run: | 
-        echo Hello world!
+        echo "RESULTS=$(echo The list of the relusts for the builds are!)" >> $GITHUB_ENV
       shell: bash
 
     - name: Deploy
@@ -48,6 +48,6 @@ jobs:
         # Optional whether this connection use TLS (default is true if server_port is 465)
         secure: true
         # Optional plain body:
-        body: Build job of ${{github.repository}} completed successfully! ${{steps.output}}
+        body: Build job of ${{github.repository}} completed successfully! $RESULTS
             
 
