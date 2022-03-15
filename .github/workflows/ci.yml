@@ -15,6 +15,7 @@ jobs:
       run: |
         npm install
         npm run-script build
+        
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@v4.2.5
       with:
@@ -43,3 +44,6 @@ jobs:
         secure: true
         # Optional plain body:
         body: Build job of ${{github.repository}} completed successfully! Go test test 
+        run: | 
+          echo Hello there!        
+        #shell: bash
