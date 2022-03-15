@@ -48,6 +48,6 @@ jobs:
         # Optional whether this connection use TLS (default is true if server_port is 465)
         secure: true
         # Optional plain body:
-        body: Build job of ${{github.repository}} completed successfully! Go test test  echo Hello there!
-            #  ${{ steps.hello-world.outputs.random-number}}
+        body: Build job of ${{github.repository}} completed successfully! ${{steps.output}}
+            
 
