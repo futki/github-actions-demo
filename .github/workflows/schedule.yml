@@ -1,8 +1,14 @@
-name: scheduled run
+
+name: On Push build
 on:
-  schedule:
-    - cron: '*/5 * * * *'
-jobs:
+  push:
+    branches:
+      - master
+#name: scheduled run
+#on:
+#  schedule:
+#    - cron: '*/5 * * * *'
+#jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
