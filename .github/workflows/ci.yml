@@ -15,7 +15,12 @@ jobs:
       run: |
         npm install
         npm run-script build
-        
+
+    - name: Output
+      run: | 
+        echo Hello world!
+      shell: bash
+
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@v4.2.5
       with:
@@ -43,10 +48,6 @@ jobs:
         # Optional whether this connection use TLS (default is true if server_port is 465)
         secure: true
         # Optional plain body:
-        body: 
-          run: |
-            echo testing the echo
-          shell: bash
+        body: Build job of ${{github.repository}} completed successfully! Go test test  echo Hello there!
+            #  ${{ steps.hello-world.outputs.random-number}}
 
-               
-       
