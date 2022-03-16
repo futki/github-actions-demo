@@ -28,7 +28,7 @@ jobs:
 
     - name: Write to file 2
       run: | 
-        echo -e "\n NO NO CRITICAL or HIGH Vulnerabilities found on builds" >> emailresults.txt
+        echo -e "\n NO CRITICAL or HIGH Vulnerabilities found on builds" >> emailresults.txt
       shell: bash
 
     - name: Set the value
@@ -66,6 +66,6 @@ jobs:
         # Optional whether this connection use TLS (default is true if server_port is 465)
         secure: true
         # Optional plain body:
-        body: Build job of ${{github.repository}} completed successfully!  Find te results below <br /> ${{ env.RESULTS }} 
+        body: Build job of ${{github.repository}} completed successfully!  Find te results below > ${{ env.RESULTS }} 
              
 
