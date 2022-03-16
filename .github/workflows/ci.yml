@@ -21,9 +21,9 @@ jobs:
         echo -e "\n No CRITICAL or HIGH Vulnerabilities found on builds" >> emailresults.txt
       shell: bash
 
-    - name: Env set
+    - name: Env set2
       run: | 
-        echo "RESULTS=$(cat emailresults.txt)" >> $GITHUB_ENV
+        "RESULTS=$(cat emailresults.txt)" >> $GITHUB_ENV
  #       echo "RESULTS=$(echo this text is from variable that has ben run on a previous step!)" >> $GITHUB_ENV
       shell: bash
 
