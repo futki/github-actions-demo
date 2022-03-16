@@ -18,7 +18,7 @@ jobs:
 
     - name: Env set
       run: | 
-        echo "RESULTS=$(echo The list of the relusts for the builds are!)" >> $GITHUB_ENV
+        echo "RESULTS=$(echo this text is from variable that has ben run on a previous step!)" >> $GITHUB_ENV
       shell: bash
 
     - name: Deploy
@@ -42,7 +42,7 @@ jobs:
         # Required mail subject:
         subject: Github Actions job result
         # Required recipients' addresses:
-        to: fitim.osmani@gmail.com
+        to: fitim.osmani@scalable.capital
         # Required sender full name (address can be skipped):
         from: githubnotificationstest@gmail.com
         # Optional whether this connection use TLS (default is true if server_port is 465)
