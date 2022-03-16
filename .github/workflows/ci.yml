@@ -24,7 +24,7 @@ jobs:
     - name: Show results
       run: | 
         # echo "RESULTS=$(cat emailresults.txt)" 
-        RESULTS=$(cat emailresults.txt)
+        echo "RESULTS=$(cat emailresults.txt)" 
         echo "RESULTS=$RESULTS" >> $GITHUB_ENV
       shell: bash
 
@@ -57,6 +57,6 @@ jobs:
         # Optional whether this connection use TLS (default is true if server_port is 465)
         secure: true
         # Optional plain body:
-        body: Build job of ${{github.repository}} completed successfully!  ${{ env.RESULTS }}
+        body: Build job of ${{github.repository}} completed successfully!  ${{ env.RESULTS }} ${{ RESULTS }}
              
 
