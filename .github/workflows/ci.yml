@@ -28,7 +28,7 @@ jobs:
 
     - name: Show results
       run: | 
-        echo "$RESULTS
+        echo $RESULTS
       shell: bash
 
 
