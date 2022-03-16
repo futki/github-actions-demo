@@ -23,7 +23,7 @@ jobs:
 
     - name: Env set 1
       run: | 
-        echo "RESULTS=$(cat emailresults.txt)" >> $GITHUB_ENV
+        export "RESULTS=$(cat emailresults.txt)" >> $GITHUB_ENV
       shell: bash
 
     - name: Show results
