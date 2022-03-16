@@ -16,11 +16,20 @@ jobs:
         npm install
         npm run-script build
 
-    - name: Env set
+    - name: Write to file 1
       run: | 
         echo -e "\n No CRITICAL or HIGH Vulnerabilities found on builds" >> emailresults.txt
       shell: bash
 
+    - name: Write to file 2
+      run: | 
+        echo -e "\n CRITICAL or HIGH Vulnerabilities found on builds" >> emailresults.txt
+      shell: bash
+
+    - name: Write to file 2
+      run: | 
+        echo -e "\n NO NO CRITICAL or HIGH Vulnerabilities found on builds" >> emailresults.txt
+      shell: bash
 
     - name: Set the value
       id: step_one
@@ -28,21 +37,6 @@ jobs:
         echo 'RESULTS<<EOF' >> $GITHUB_ENV
         cat emailresults.txt >> $GITHUB_ENV
         echo 'EOF' >> $GITHUB_ENV
-
-      # - name: Env set
-    #   run: | 
-    #     echo -e "\n No CRITICAL or HIGH Vulnerabilities found on builds" >> emailresults.txt
-    #   shell: bash
-
-    # - name: Env set 1
-    #   run: | 
-    #     export "RESULTS=$(cat emailresults.txt)" >> $GITHUB_ENV
-    #   shell: bash
-
-    # - name: Show results
-    #   run: | 
-    #     echo $RESULTS
-    #   shell: bash
 
 
     - name: Deploy
