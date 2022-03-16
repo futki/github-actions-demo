@@ -19,7 +19,7 @@ jobs:
     - name: Env set
       run: | 
         echo -e "\n No CRITICAL or HIGH Vulnerabilities found on builds" >> emailresults.txt
-              shell: bash
+      shell: bash
 
     - name: Show results
       run: | 
