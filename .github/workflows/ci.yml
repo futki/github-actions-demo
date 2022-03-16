@@ -21,13 +21,20 @@ jobs:
         echo -e "\n No CRITICAL or HIGH Vulnerabilities found on builds" >> emailresults.txt
       shell: bash
 
-    - name: Env set2
+    - name: Env set
       run: | 
- #       "RESULTS=$(cat emailresults.txt)" >> $GITHUB_ENV
- #       echo "RESULTS=$(echo this text is from variable that has ben run on a previous step!)" >> $GITHUB_ENV
-         RESULTS='cat emailresults.txt'   
-         echo $RESULTS
+        RESULTS='cat emailresults.txt'
+        echo $RESULTS
       shell: bash
+
+#     - name: Env set2
+#       run: | 
+# #      "RESULTS=$(cat emailresults.txt)" >> $GITHUB_ENV
+# #      "RESULTS=$(cat emailresults.txt)" >> $GITHUB_ENV
+# #       echo "RESULTS=$(echo this text is from variable that has ben run on a previous step!)" >> $GITHUB_ENV
+#         RESULTS='cat emailresults.txt'   
+#         echo $RESULTS
+#       shell: bash
 
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@v4.2.5
