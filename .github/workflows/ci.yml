@@ -23,8 +23,8 @@ jobs:
 
     - name: Show results
       run: | 
-        echo "RESULTS=$(cat emailresults.txt)" >> $GITHUB_ENV
-        echo $RESULTS
+        echo "RESULTS=$(cat emailresults.txt)" 
+        echo "RESULTS=$RESULTS" >> $GITHUB_ENV
       shell: bash
 
 
