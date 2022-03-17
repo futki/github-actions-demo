@@ -62,7 +62,7 @@ jobs:
         # Required recipients' addresses:
         to: fitim.osmani@scalable.capital
         # Required sender full name (address can be skipped):
-        from: github actions
+        from: gha-notification-email
         # Optional whether this connection use TLS (default is true if server_port is 465)
         secure: true
         # Optional plain body:
