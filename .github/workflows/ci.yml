@@ -32,7 +32,7 @@ jobs:
       shell: bash
 
     - name: Set the value
-      id: step_one
+ #     id: step_one
       run: |
         echo 'RESULTS<<EOF' >> $GITHUB_ENV
         cat emailresults.txt >> $GITHUB_ENV
@@ -66,6 +66,6 @@ jobs:
         # Optional whether this connection use TLS (default is true if server_port is 465)
         secure: true
         # Optional plain body:
-        body: Build job of ${{github.repository}} completed successfully!  Find te results below > ${{ env.RESULTS }} 
+        body: Build job of ${{github.repository}} completed successfully!  Find te results below  ${{ env.RESULTS }} 
              
 
